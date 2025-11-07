@@ -1,0 +1,264 @@
+:root {
+    --bg-color-primary: #f78a76;
+    /* fond corail */
+    --bg-color-secondary: #25A2C3;
+    --color-link: #f78a70;
+    --text-bg-dark: #FFF;
+    --font-logo: 'Pacifico';
+    --font-textes: 'Open Sans';
+    --font-titles-buttons: 'Montserrat';
+}
+
+/* pacifico-regular - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Pacifico';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/pacifico-v23-latin-regular.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* open-sans-regular - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/open-sans-v44-latin-regular.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* montserrat-regular - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/montserrat-v31-latin-regular.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* Reset des marges et paddings */
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+body {
+    font-family: var(--font-textes);
+    font-size: 18px;
+}
+
+h1 {
+    --font-family: var(--font-logo);
+}
+
+.button {
+    background-color: var(--bg-color-primary);
+    color: var(--text-bg-dark);
+    padding: 8px 24px;
+    font-size: 0.8rem;
+    border-radius: 1px;
+}
+
+/* ======================= header ======================= */
+#banner {
+    text-align: center;
+    padding: 40px;
+}
+
+#logo a {
+    font-family: var(--font-logo);
+    color: var(--color-link);
+    font-size: 2.5rem;
+}
+
+#mainMenu ul {
+    display: flex;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+#mainMenu ul li {
+    margin: 32px 16px 0;
+}
+
+#mainMenu ul li a {
+    color: black;
+}
+
+#mainMenu ul li a:hover,
+#mainMenu ul li a.choice {
+    color: var(--color-link);
+}
+
+/* =========================== main ======================= */
+
+/* ======================== welcome ===================== */
+#welcome {
+    background-image: url("images/paysage.jpg");
+    height: 450px;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+#welcome h1 {
+    color: var(--bg-color-primary);
+    text-shadow: black 10px 0 10px;
+}
+
+#welcome p {
+    width: 60%;
+    color: var(--text-bg-dark);
+    padding: 8px 24px;
+    background-color: rgba(0, 0, 0, 0.350);
+}
+
+/* ========================= categories ==================== */
+#categories {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#categories .colonne {
+    width: 30%;
+}
+
+#categories .colonne h3 {
+    color: var(--bg-color-secondary);
+    font-family: var(--font-titles-buttons);
+    margin-bottom: 8px;
+}
+
+#categories .colonne p {
+    color: rgb(145, 145, 145);
+    margin-bottom: 24px;
+    font-size: 0.8rem;
+}
+
+#categories .colonne:first-child {
+    text-align: right;
+}
+
+#categories .colonne img {
+    border-radius: 50%;
+    width: 100%;
+}
+
+/* ============================ call-to-action ========================== */
+#cta {
+    background-color: var(--bg-color-primary);
+    color: var(--text-bg-dark);
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 48px;
+}
+
+#cta p {
+    padding: 10px 0px;
+    width: 60%;
+}
+
+#quote {
+    font-style: italic;
+}
+
+#cta-button {
+    background-color: var(--text-bg-dark);
+    color: var(--color-link);
+    font-size: 90%;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+/* ====================== en avant ====================== */
+#enAvant {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 48px;
+}
+
+#enAvant .post {
+    width: 28%;
+    border: 1px solid rgba(53, 51, 51, 0.274);
+    padding-bottom: 24px;
+}
+
+#enAvant .post img {
+    width: 100%;
+}
+
+#enAvant .post h3,
+#enAvant .post p {
+    padding: 16px 16px 0;
+}
+
+#enAvant .post a h3 {
+    color: var(--bg-color-secondary);
+}
+
+/* ========================== footer ===========================*/
+
+#foot {
+    background-color: var(--bg-color-secondary);
+    color: var(--text-bg-dark);
+}
+
+#foot #contact {
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+#foot #contact h3 {
+    font-family: var(--font-titles-buttons);
+
+}
+
+#foot #contact ul {
+    display: flex;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+#foot #contact ul i {
+    font-size: 1.2em;
+}
+
+#foot #copyright{
+    text-align:center;
+    padding:24px;
+}
+
+#foot a{
+    color: var(--text-bg-dark)
+}
